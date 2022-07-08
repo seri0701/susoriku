@@ -17,9 +17,8 @@ export const EventCom: FC<Props> = ({ EVENT_ITEMS }: any) => {
           <Grid
             key={item.Event}
             sx={{
-              borderTop: 'solid',
+              borderTop: '1px solid #eaeaea',
             }}
-            className="border-t-2 border-t-blue-200"
           >
             <Grid.Col span={2} className="text-right">
               {item.Entry}

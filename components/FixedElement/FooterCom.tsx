@@ -17,7 +17,7 @@ const FooterCom: NextPage = () => {
         alignItems: 'center',
       }}
     >
-      <Text>©︎陸上教室</Text>
+      <Text>©︎裾野市陸上教室</Text>
     </Box>
   )
 }
