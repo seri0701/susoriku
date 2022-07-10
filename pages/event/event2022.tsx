@@ -18,7 +18,7 @@ const EVENT_ITEMS2022 = [
     Entry: '◯',
     Month: 7,
     Day: 16,
-    Event: '富士裾のトラックミート（陸上交流会）',
+    Event: '富士裾野トラックミート（陸上交流会）',
   },
   { Entry: '', Month: 7, Day: 30, Event: '東部陸上カーニバル' },
   { Entry: '', Month: 8, Day: 20, Event: '東海小学生陸上大会（三重）' },
