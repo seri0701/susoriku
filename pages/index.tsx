@@ -5,6 +5,7 @@ import GridCom from '../components/GridCom'
 import { Layout } from '../components/FixedElement/Layout'
 import HeaderCom from '../components/FixedElement/HeaderCom'
 import FooterCom from '../components/FixedElement/FooterCom'
+import PostList from 'components/PostList'
 
 const Home: NextPage = () => {
   return (
@@ -27,6 +28,11 @@ const Home: NextPage = () => {
             description="Learn about Next.js in an interactive course with quizzes!"
             link=""
           />
+        </GridCom>
+
+        <PostList />
+
+        <GridCom>
           <CardCom
             title="定期練習予定 &rarr;"
             description="Discover and deploy boilerplate example Next.js projects."
