@@ -20,13 +20,11 @@ export const EventCom: FC<Props> = ({ EVENT_ITEMS }: any) => {
               borderTop: '1px solid #eaeaea',
             }}
           >
-            <Grid.Col span={2} className="text-right">
-              {item.Entry}
-            </Grid.Col>
+            <Grid.Col span={1}>{item.Entry}</Grid.Col>
             <Grid.Col span={4} className="text-center">
               {item.Month}月{item.Day}日
             </Grid.Col>
-            <Grid.Col span={6}>{item.Event}</Grid.Col>
+            <Grid.Col span={7}>{item.Event}</Grid.Col>
           </Grid>
         )
       })}
