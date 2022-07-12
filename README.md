@@ -1,23 +1,22 @@
-# TypeScript & Mantine Next.js example
+## 紹介
 
-This is a simple project that shows the usage of Next.js with TypeScript and Mantine.
+近隣にある陸上教室の HP です。
 
-## Deploy your own
+Next.js のテンプレートの雰囲気をそのままに、シンプルに仕上げています。
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-typescript-mantine)
+supabase を利用して管理者がお知らせを投稿できるよう、別で管理ページも作成してあります。
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-typescript-mantine&project-name=with-typescript-mantine&repository-name=with-typescript-mantine)
+## 使用技術
 
-## How to use it?
+- [React](https://ja.reactjs.org/)
+- [Next.js](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Supabase](https://supabase.com/)
+- [MantineUI](https://mantine.dev/)
+- [tailwindcss](https://tailwindcss.com/)
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+## 参考
 
-```bash
-npx create-next-app --example with-mantine with-mantine-app
-# or
-yarn create next-app --example with-mantine with-mantine-app
-# or
-pnpm create next-app --example with-mantine with-mantine-app
-```
+オンラインサロン「[IT KINGDOM](https://it-kingdom.com)」で React を学習をしました。
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+Udemy 講座「[MantineUI The Complete Guide](https://www.udemy.com/share/106slg3@iHfuOqtrLtd2XDCyodsd5SC-4QTk1EuVj6W5uOk_kwc1RnSmJFfzi2eRBliaIKLd8A==/)」で Supabase を学習をしました。
