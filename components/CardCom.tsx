@@ -11,7 +11,7 @@ const CardCom = (props: Props) => {
     <Anchor
       href={props.link}
       // target="_blank"
-      className="mt-0 w-96 rounded-xl border p-6 pt-2 pb-2 text-left hover:text-blue-600 focus:text-blue-600"
+      className="mt-0 rounded-xl border p-6 pt-2 pb-2 text-left hover:text-blue-600 focus:text-blue-600"
     >
       <Text component="h2" className="text-left text-2xl font-bold">
         {props.title}

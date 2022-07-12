@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Grid } from '@mantine/core'
+import { Grid, Text, Box } from '@mantine/core'
 
 type Props = {
   CALENDER_ITEMS: any
@@ -14,7 +14,12 @@ export const CalenderCom: FC<Props> = ({ CALENDER_ITEMS }) => {
     <>
       {CALENDER_ITEMS.map((item: any) => {
         return (
-          <Grid key={item.Day}>
+          <Grid
+            key={item.Day}
+            sx={{
+              borderTop: '1px solid #eaeaea',
+            }}
+          >
             <Grid.Col span={3} className="text-right">
               {item.Day}日
             </Grid.Col>
@@ -25,6 +30,15 @@ export const CalenderCom: FC<Props> = ({ CALENDER_ITEMS }) => {
           </Grid>
         )
       })}
+      <Text
+        sx={{
+          borderTop: '1px solid #eaeaea',
+          paddingTop: '10px',
+          color: '#0251d1',
+        }}
+      >
+        天候等により練習日程が予告なく変更になることがあります。
+      </Text>
     </>
   )
 }

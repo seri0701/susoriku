@@ -32,7 +32,7 @@ const HeaderCom: NextPage = () => {
           textAlign: 'center',
         }}
       >
-        Get started by editing
+        Get started by training
       </Text>
     </>
   )
