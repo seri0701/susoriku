@@ -1,6 +1,6 @@
 import { Grid } from '@mantine/core'
-import { PostCard } from './PostCard'
-import { useQueryPosts } from '../hooks/useQueryPosts'
+import { PostCard } from '../MountUnits/PostCard'
+import { useQueryPosts } from '../../hooks/useQueryPosts'
 
 const PostList = () => {
   const { data } = useQueryPosts()

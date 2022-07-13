@@ -5,7 +5,7 @@ type Props = {
   children: ReactNode
 }
 
-const GridCom = (props: Props) => {
+const GridLayout = (props: Props) => {
   return (
     <Box
       sx={{
@@ -25,4 +25,4 @@ const GridCom = (props: Props) => {
   )
 }
 
-export default GridCom
+export default GridLayout

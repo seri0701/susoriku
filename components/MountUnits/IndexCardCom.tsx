@@ -6,7 +6,7 @@ type Props = {
   link: string
 }
 
-const CardCom = (props: Props) => {
+const IndexCardCom = (props: Props) => {
   return (
     <Anchor
       href={props.link}
@@ -23,4 +23,4 @@ const CardCom = (props: Props) => {
   )
 }
 
-export default CardCom
+export default IndexCardCom

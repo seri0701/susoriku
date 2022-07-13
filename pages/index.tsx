@@ -1,11 +1,11 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import CardCom from '../components/CardCom'
-import GridCom from '../components/GridCom'
-import { Layout } from '../components/FixedElement/Layout'
+
 import HeaderCom from '../components/FixedElement/HeaderCom'
 import FooterCom from '../components/FixedElement/FooterCom'
-import PostList from 'components/PostList'
+import { Layout } from '../components/FixedElement/Layout'
+
+import IndexCom from 'components/Organisms/IndexCom'
 
 const Home: NextPage = () => {
   return (
@@ -16,29 +16,7 @@ const Home: NextPage = () => {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <HeaderCom />
-        <GridCom>
-          <CardCom
-            title="定期練習予定 &rarr;"
-            description="Discover and develop a competition that suits you."
-            link="/calender/regular2022"
-          />
-          <CardCom
-            title="７月練習予定 &rarr;"
-            description="Find in-depth information about features and KYOUSHITU."
-            link="/calender/calender07"
-          />
-          <CardCom
-            title="８月練習予定 &rarr;"
-            description="Learn about Athletics in an interactive course with drill!"
-            link="/calender/calender08"
-          />
-          <CardCom
-            title="年間行事予定 &rarr;"
-            description="Instantly deployed your Next.js site to a public URL with Vercel."
-            link="/event/event2022"
-          />
-        </GridCom>
-        <PostList />
+        <IndexCom />
       </Layout>
       <FooterCom />
     </>

@@ -1,9 +1,11 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { Layout } from '../../components/FixedElement/Layout'
+
 import HeaderCom from '../../components/FixedElement/HeaderCom'
 import FooterCom from '../../components/FixedElement/FooterCom'
-import EventCom from 'components/EventCom'
+import { Layout } from '../../components/FixedElement/Layout'
+
+import EventCom from 'components/Organisms/EventCom'
 
 const EVENT_ITEMS2022 = [
   { Entry: '', Month: 4, Day: 3, Event: '東部春季記録会' },

@@ -1,10 +1,13 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { Layout } from '../../components/FixedElement/Layout'
+
+import { Text } from '@mantine/core'
+
 import HeaderCom from '../../components/FixedElement/HeaderCom'
 import FooterCom from '../../components/FixedElement/FooterCom'
-import Calender from '../../components/CalendarCom'
-import { Text } from '@mantine/core'
+import { Layout } from '../../components/FixedElement/Layout'
+
+import Calender from '../../components/Organisms/CalendarCom'
 
 const Date = [
   { Day: 1, Hour: 18, Minute: '00', Venue: '競技場' },
