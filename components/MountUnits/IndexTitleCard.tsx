@@ -2,11 +2,10 @@ import { Anchor, Text } from '@mantine/core'
 
 type Props = {
   title: string
-  description: string
   link: string
 }
 
-const IndexCardCom = (props: Props) => {
+const PlanCard = (props: Props) => {
   return (
     <Anchor
       href={props.link}
@@ -16,11 +15,8 @@ const IndexCardCom = (props: Props) => {
       <Text component="h2" className="text-left text-2xl font-bold">
         {props.title}
       </Text>
-      <Text component="p" className="text-md text-left">
-        {props.description}
-      </Text>
     </Anchor>
   )
 }
 
-export default IndexCardCom
+export default PlanCard
