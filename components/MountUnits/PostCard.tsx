@@ -7,7 +7,7 @@ type Props = {
   status: string
   postUrl: string
 }
-export const PostCard: FC<Props> = ({ title, content, status, postUrl }) => {
+export const PostCard: FC<Props> = ({ title, content, status }) => {
   return (
     <Card className="bg-slate-200">
       <Group position="apart" my="md">
