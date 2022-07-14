@@ -31,12 +31,8 @@ const IndexCom = () => {
         />
       </GridLayout>
       <PostList />
-      <Center>
-        <IndexTitleCard title="競技会結果 &rarr;" link="/result" />
-      </Center>
-      <Center>
-        <IndexTitleCard title="育成方針 &rarr;" link="/result" />
-      </Center>
+      <IndexTitleCard title="競技会結果 &rarr;" link="/result" />
+      <IndexTitleCard title="育成方針 &rarr;" link="/plan" />
     </>
   )
 }
