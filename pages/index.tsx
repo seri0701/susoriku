@@ -18,7 +18,7 @@ const Home: NextPage = () => {
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <HeaderCom />
+        <HeaderCom Color="" Caption="Get started by training" />
         <IndexCom />
       </Layout>
       <FooterCom />

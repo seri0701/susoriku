@@ -1,13 +1,21 @@
-import type { NextPage } from 'next'
+import { FC } from 'react'
 import { Anchor, Text } from '@mantine/core'
 
-const HeaderCom: NextPage = () => {
+type Props = {
+  Color: string
+  Caption: string
+}
+
+const HeaderCom: FC<Props> = ({ Color, Caption }) => {
+  const HeaderColor = Color ? Color : '#0070f3'
+  const HeaderCaption = Caption ? Caption : ''
+
   return (
     <>
       <Anchor href="/">
         <Text
           sx={{
-            color: '#0070f3',
+            color: HeaderColor,
             fontSize: '2rem',
             '@media (min-width: 800px)': {
               fontSize: '3rem',
@@ -32,7 +40,7 @@ const HeaderCom: NextPage = () => {
           textAlign: 'center',
         }}
       >
-        Get started by training
+        {HeaderCaption}
       </Text>
     </>
   )

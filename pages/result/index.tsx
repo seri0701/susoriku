@@ -9,7 +9,7 @@ import ResultCom from 'components/Organisms/ResultCom'
 const Result: NextPage = () => {
   return (
     <Layout title="結果">
-      <HeaderCom />
+      <HeaderCom Color="" Caption="競技会結果" />
       <ResultCom />
       <FooterCom />
     </Layout>
