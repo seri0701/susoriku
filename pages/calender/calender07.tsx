@@ -7,7 +7,21 @@ import { Layout } from '../../components/FixedElement/Layout'
 
 import Calender from '../../components/Organisms/CalendarCom'
 
-const Date = [{ Day: 1, Hour: 18, Minute: '00', Venue: '競技場' }]
+const Date = [
+  { Day: 5, Hour: 17, Minute: 30, Venue: '火' },
+  { Day: 7, Hour: 17, Minute: 30, Venue: '木' },
+  { Day: 8, Hour: 18, Minute: '00', Venue: '金' },
+  { Day: 12, Hour: 17, Minute: 30, Venue: '火' },
+  { Day: 14, Hour: 18, Minute: '00', Venue: '木' },
+  { Day: 15, Hour: 17, Minute: 30, Venue: '金' },
+  { Day: 16, Hour: 7, Minute: '00', Venue: '富士裾野トラックミート' },
+  { Day: 21, Hour: 17, Minute: 30, Venue: '木' },
+  { Day: 22, Hour: 17, Minute: 30, Venue: '金' },
+  { Day: 23, Hour: 18, Minute: '00', Venue: '土' },
+  { Day: 26, Hour: 17, Minute: 30, Venue: '火' },
+  { Day: 28, Hour: 18, Minute: '00', Venue: '木' },
+  { Day: 30, Hour: 0, Minute: 0, Venue: '東部陸上カーニバル' },
+]
 
 const Calender07: NextPage = () => {
   return (
@@ -19,8 +33,8 @@ const Calender07: NextPage = () => {
         </Head>
         <HeaderCom Color="" Caption="7月練習予定" />
         <Calender CALENDER_ITEMS={Date} />
+        <FooterCom />
       </Layout>
-      <FooterCom />
     </>
   )
 }

@@ -8,8 +8,8 @@ import ResultCom from 'components/Organisms/ResultCom'
 
 const Result: NextPage = () => {
   return (
-    <Layout title="結果">
-      <HeaderCom Color="" Caption="競技会結果" />
+    <Layout title="競技会結果">
+      <HeaderCom Color="" Caption="競技会結果(工事中)" />
       <ResultCom />
       <FooterCom />
     </Layout>
