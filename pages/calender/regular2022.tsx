@@ -32,6 +32,17 @@ const Date = [
   { Day: '12/10', Hour: 9, Minute: '00', Venue: '多目的広場' },
   { Day: 17, Hour: 9, Minute: '00', Venue: '競技場' },
   { Day: 24, Hour: 9, Minute: '00', Venue: '競技場' },
+  { Day: '1/7', Hour: 9, Minute: '00', Venue: '競技場' },
+  { Day: 21, Hour: 9, Minute: '00', Venue: '競技場' },
+  { Day: 28, Hour: 9, Minute: '00', Venue: '競技場' },
+  { Day: '2/4', Hour: 9, Minute: '00', Venue: '競技場' },
+  { Day: 11, Hour: 9, Minute: '00', Venue: '競技場' },
+  { Day: 18, Hour: 9, Minute: '00', Venue: '多目的広場' },
+  { Day: 25, Hour: 9, Minute: '00', Venue: '多目的広場' },
+  { Day: '3/4', Hour: 9, Minute: '00', Venue: '競技場' },
+  { Day: 11, Hour: 9, Minute: '00', Venue: '競技場' },
+  { Day: 18, Hour: 9, Minute: '00', Venue: '競技場' },
+  { Day: 25, Hour: 9, Minute: '00', Venue: '競技場' },
 ]
 
 const Regular: NextPage = () => {
