@@ -1,9 +1,9 @@
 import { Grid } from '@mantine/core'
 import { CustomCard } from 'components/MountUnits/ResultCard'
-import { useQueryPosts } from 'hooks/useQueryPosts'
+import { useQueryResults } from 'hooks/useQueryPosts'
 
 const ResultCom = () => {
-  const { data } = useQueryPosts()
+  const { data } = useQueryResults()
   return (
     <Grid grow gutter="lg">
       {data?.map((post) => (
