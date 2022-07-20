@@ -1,5 +1,4 @@
 import { ChangeEvent, useState } from 'react'
-import Link from 'next/link'
 import {
   Container,
   Center,
@@ -12,12 +11,15 @@ import {
 import { useForm, yupResolver } from '@mantine/form'
 import * as Yup from 'yup'
 import { useQueryClient } from 'react-query'
-import { Post } from '../../types'
-import { supabase } from '../../utils/supabase'
+
 import { Layout } from '../../components/FixedElement/Layout'
 import HeaderCom from 'components/FixedElement/HeaderCom'
-import PostListCom from 'components/Organisms/PostListCom'
 import FooterCom from 'components/FixedElement/FooterCom'
+import { Post } from '../../types'
+import { supabase } from '../../utils/supabase'
+import PostListCom from 'components/Organisms/PostListCom'
+import { AuthCom } from 'hooks/auth/authCom'
+import { LogoutButton } from 'components/Atom/LogoutButton'
 
 const schema = Yup.object().shape({
   title: Yup.string().required('No title provided.'),
@@ -71,48 +73,51 @@ const PostEdit = () => {
   }
   return (
     <>
-      <Layout title="PostEdit">
-        <HeaderCom Caption="お知らせ記事投稿" Color="brown" />
-        <Container className="w-96">
-          <form onSubmit={form.onSubmit(handleSubmit)}>
-            <TextInput
-              mb="md"
-              label="Title*"
-              placeholder="New title"
-              {...form.getInputProps('title')}
-            />
-            <Textarea
-              mb="md"
-              minRows={6}
-              placeholder="New content"
-              label="Description*"
-              {...form.getInputProps('content')}
-            />
-            <Select
-              label="Status*"
-              data={['New', 'PickUp', 'Hot']}
-              {...form.getInputProps('status')}
-            />
-            <Center>{isLoading && <Loader my="xl" />}</Center>
-            <Center>
-              <input
-                className="hidden"
-                type="file"
-                id="photo"
-                accept="image/*"
-                onChange={(e) => uploadPostImg(e)}
+      <AuthCom>
+        <Layout title="PostEdit">
+          <HeaderCom Caption="お知らせ記事投稿" Color="brown" />
+          <Container className="w-96">
+            <form onSubmit={form.onSubmit(handleSubmit)}>
+              <TextInput
+                mb="md"
+                label="Title*"
+                placeholder="New title"
+                {...form.getInputProps('title')}
               />
-            </Center>
-            <Center>
-              <Button mb="xl" type="submit" className="mt-5">
-                投稿ボタン
-              </Button>
-            </Center>
-          </form>
-        </Container>
-        <PostListCom />
-      </Layout>
-      <FooterCom />
+              <Textarea
+                mb="md"
+                minRows={6}
+                placeholder="New content"
+                label="Description*"
+                {...form.getInputProps('content')}
+              />
+              <Select
+                label="Status*"
+                data={['New', 'PickUp', 'Hot']}
+                {...form.getInputProps('status')}
+              />
+              <Center>{isLoading && <Loader my="xl" />}</Center>
+              <Center>
+                <input
+                  className="hidden"
+                  type="file"
+                  id="photo"
+                  accept="image/*"
+                  onChange={(e) => uploadPostImg(e)}
+                />
+              </Center>
+              <Center>
+                <Button mb="xl" type="submit" className="mt-5">
+                  投稿ボタン
+                </Button>
+              </Center>
+            </form>
+          </Container>
+          <PostListCom />
+          <LogoutButton />
+        </Layout>
+        <FooterCom />
+      </AuthCom>
     </>
   )
 }

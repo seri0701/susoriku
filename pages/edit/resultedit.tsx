@@ -13,12 +13,13 @@ import { useForm, yupResolver } from '@mantine/form'
 import * as Yup from 'yup'
 import { ReplyIcon, CameraIcon } from '@heroicons/react/solid'
 import { useQueryClient } from 'react-query'
-import { Post } from '../../types'
-import { supabase } from '../../utils/supabase'
+
 import { Layout } from '../../components/FixedElement/Layout'
 import HeaderCom from 'components/FixedElement/HeaderCom'
-import ResultCom from 'components/Organisms/ResultCom'
 import FooterCom from 'components/FixedElement/FooterCom'
+import { Post } from '../../types'
+import { supabase } from '../../utils/supabase'
+import ResultCom from 'components/Organisms/ResultCom'
 
 const schema = Yup.object().shape({
   title: Yup.string().required('No title provided.'),
