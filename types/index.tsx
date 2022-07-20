@@ -1,8 +1,7 @@
-// export type Form = {
-//   email: string
-//   password: string
-//   age: number
-// }
+export type Form = {
+  email: string
+  password: string
+}
 // export type Todo = {
 //   id: number
 //   created_at: string

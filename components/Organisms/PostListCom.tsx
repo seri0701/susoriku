@@ -1,8 +1,8 @@
 import { Grid } from '@mantine/core'
-import { PostCard } from '../MountUnits/PostCard'
+import { PostCard } from '../Molecules/PostCard'
 import { useQueryPosts } from '../../hooks/useQueryPosts'
 
-const PostList = () => {
+const PostListCom = () => {
   const { data } = useQueryPosts()
   return (
     <>
@@ -26,4 +26,4 @@ const PostList = () => {
   )
 }
 
-export default PostList
+export default PostListCom

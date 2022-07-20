@@ -26,7 +26,7 @@ export const CustomCard: FC<Props> = ({ title, content, status, postUrl }) => {
       </Group>
       <Text size="sm">{content}</Text>
       <Button mt="md" size="xs" variant="light" color="indigo" fullWidth>
-        Subscribe
+        chat
       </Button>
     </Card>
   )

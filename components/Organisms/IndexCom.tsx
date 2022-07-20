@@ -1,9 +1,9 @@
 import { Center } from '@mantine/core'
 
 import GridLayout from 'components/Layout/GridLayout'
-import PostList from 'components/Organisms/PostList'
-import IndexCard from 'components/MountUnits/IndexCard'
-import IndexTitleCard from 'components/MountUnits/IndexTitleCard'
+import PostListCom from 'components/Organisms/PostListCom'
+import IndexCard from 'components/Molecules/IndexCard'
+import IndexTitleCard from 'components/Molecules/IndexTitleCard'
 
 const IndexCom = () => {
   return (
@@ -30,12 +30,12 @@ const IndexCom = () => {
           link="/event/event2022"
         />
       </GridLayout>
-      <PostList />
+      <PostListCom />
       <GridLayout>
         <IndexTitleCard title="競技会結果 &rarr;" link="/result" />
         <IndexTitleCard title="育成方針 &rarr;" link="/plan" />
       </GridLayout>
-      <IndexTitleCard title="記事投稿 &rarr;" link="/plan" />
+      <IndexTitleCard title="記事投稿 &rarr;" link="/edit" />
     </>
   )
 }

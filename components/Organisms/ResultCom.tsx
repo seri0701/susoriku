@@ -1,5 +1,5 @@
 import { Grid } from '@mantine/core'
-import { CustomCard } from 'components/MountUnits/ResultCard'
+import { CustomCard } from 'components/Molecules/ResultCard'
 import { useQueryResults } from 'hooks/useQueryPosts'
 
 const ResultCom = () => {
