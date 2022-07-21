@@ -23,6 +23,11 @@ const IndexCom = () => {
           title="８月練習予定 &rarr;"
           description="Learn about Athletics in an interactive course with drill!"
           link="/calender/calender08"
+        />{' '}
+        <IndexCard
+          title="９月練習予定 &rarr;"
+          description="Learn about Athletics in an interactive course with drill!"
+          link="/calender/calender09"
         />
         <IndexCard
           title="年間行事予定 &rarr;"

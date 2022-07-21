@@ -55,13 +55,13 @@ const Regular: NextPage = () => {
         </Head>
         <HeaderCom Color="" Caption="定期練習予定" />
         <Calender CALENDER_ITEMS={Date} />
-        <Text
+        {/* <Text
           sx={{
             color: '#0251d1',
           }}
         >
           教室体験は上記日程でお気軽にお越しください。
-        </Text>
+        </Text> */}
       </Layout>
       <FooterCom />
     </>
