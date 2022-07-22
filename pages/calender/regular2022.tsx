@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
-import { Text } from '@mantine/core'
+// import { Text } from '@mantine/core'
 
 import HeaderCom from '../../components/FixedElement/HeaderCom'
 import FooterCom from '../../components/FixedElement/FooterCom'
