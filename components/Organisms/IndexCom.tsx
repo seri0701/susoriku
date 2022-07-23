@@ -19,6 +19,9 @@ const IndexCom = () => {
           description="Find in-depth information about features and KYOUSHITU."
           link="/calender/calender07"
         />
+      </GridLayout>
+      <PostListCom />
+      <GridLayout>
         <IndexCard
           title="８月練習予定 &rarr;"
           description="Learn about Athletics in an interactive course with drill!"
@@ -34,13 +37,10 @@ const IndexCom = () => {
           description="Instantly deployed your Next.js site to a public URL with Vercel."
           link="/event/event2022"
         />
-      </GridLayout>
-      <PostListCom />
-      <GridLayout>
         <IndexTitleCard title="競技会結果 &rarr;" link="/result" />
         <IndexTitleCard title="育成方針 &rarr;" link="/plan" />
+        <IndexTitleCard title="記事投稿 &rarr;" link="/edit" />
       </GridLayout>
-      <IndexTitleCard title="記事投稿 &rarr;" link="/edit" />
     </>
   )
 }
