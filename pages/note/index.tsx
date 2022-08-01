@@ -6,7 +6,7 @@ import { NoteItem } from '../../components/NoteItem'
 import { Note } from '../../types/types'
 import { LayoutBlack } from 'components/FixedElement/LayoutBlack'
 import { LogoutButtonIndigo } from 'components/Atom/LogoutButtonIndigo'
-import { TopButton } from 'components/Atom/TopButton'
+import FooterChat from 'components/FixedElement/FooterChat'
 
 export const getStaticProps: GetStaticProps = async () => {
   console.log('ISR invoked - notes page')
@@ -41,7 +41,7 @@ const Notes: NextPage<StaticProps> = ({ notes }) => {
           />
         ))}
       </ul>
-      <TopButton />
+      <FooterChat />
     </LayoutBlack>
   )
 }

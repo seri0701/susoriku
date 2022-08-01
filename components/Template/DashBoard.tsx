@@ -11,6 +11,7 @@ export const DashBoard = () => {
         <HeaderCom Color="gray" Caption="どの記事を投稿する？" />
         <IndexTitleCard title="Topの記事 &rarr;" link="/edit/postedit" />
         <IndexTitleCard title="競技会結果 &rarr;" link="/edit/resultedit" />
+        <IndexTitleCard title="チャットルームへ &rarr;" link="/note" />
         <LogoutButtonGray />
       </Layout>
       <FooterCom />

@@ -8,6 +8,7 @@ import { CommentItem } from '../../components/CommentItem'
 import { Note } from '../../types/types'
 import { LayoutBlack } from 'components/FixedElement/LayoutBlack'
 import { Center } from '@mantine/core'
+import FooterChat from 'components/FixedElement/FooterChat'
 
 const getAllNoteIds = async () => {
   const { data: ids } = await supabase.from('notes').select('id')
@@ -66,6 +67,7 @@ const NotePage: NextPage<StaticProps> = ({ note }) => {
           <ChevronDoubleLeftIcon className="my-6 h-6 w-6 cursor-pointer text-blue-200" />
         </Link>
       </Center>
+      <FooterChat />
     </LayoutBlack>
   )
 }
