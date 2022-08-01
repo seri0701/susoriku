@@ -9,7 +9,7 @@ import { Layout } from 'components/FixedElement/Layout'
 const Plan: NextPage = () => {
   return (
     <>
-      <Layout title="裾野市陸上教室">
+      <Layout title="方針">
         <HeaderCom Caption="" Color="gray" />
         <Text size="xl" color="maroon" align="center">
           裾野市陸上教室の方針

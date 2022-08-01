@@ -37,6 +37,10 @@ const IndexCom = () => {
           description="Instantly deployed your Next.js site to a public URL with Vercel."
           link="/event/event2022"
         />
+        <IndexTitleCard
+          title="走り幅跳び練習内容 &rarr;"
+          link="/practice/longjamp"
+        />
         <IndexTitleCard title="競技会結果 &rarr;" link="/result" />
         <IndexTitleCard title="育成方針 &rarr;" link="/plan" />
         <IndexTitleCard title="記事投稿 &rarr;" link="/edit" />
