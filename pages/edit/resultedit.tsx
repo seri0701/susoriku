@@ -12,7 +12,7 @@ import {
 import { useForm, yupResolver } from '@mantine/form'
 import * as Yup from 'yup'
 import { ReplyIcon, CameraIcon } from '@heroicons/react/solid'
-import { useQueryClient } from 'react-query'
+import { useQueryClient } from '@tanstack/react-query'
 
 import { Layout } from '../../components/FixedElement/Layout'
 import HeaderCom from 'components/FixedElement/HeaderCom'

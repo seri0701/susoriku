@@ -10,7 +10,7 @@ import {
 } from '@mantine/core'
 import { useForm, yupResolver } from '@mantine/form'
 import * as Yup from 'yup'
-import { useQueryClient } from 'react-query'
+import { useQueryClient } from '@tanstack/react-query'
 
 import { Layout } from '../../components/FixedElement/Layout'
 import HeaderCom from 'components/FixedElement/HeaderCom'

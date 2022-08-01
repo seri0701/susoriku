@@ -1,4 +1,4 @@
-import { useMutation } from 'react-query'
+import { useMutation } from '@tanstack/react-query'
 import { supabase } from '../utils/supabase'
 import useStore from '../store'
 import { revalidateSingle } from '../utils/revalidation'
