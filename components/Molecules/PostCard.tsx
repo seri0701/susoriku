@@ -17,9 +17,6 @@ export const PostCard: FC<Props> = ({ title, content, status }) => {
         </Badge>
       </Group>
       <Text size="sm">{content}</Text>
-      <Button mt="md" size="xs" variant="light" color="indigo" fullWidth>
-        chat
-      </Button>
     </Card>
   )
 }

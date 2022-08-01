@@ -44,6 +44,7 @@ const IndexCom = () => {
         <IndexTitleCard title="競技会結果 &rarr;" link="/result" />
         <IndexTitleCard title="育成方針 &rarr;" link="/plan" />
         <IndexTitleCard title="記事投稿 &rarr;" link="/edit" />
+        <IndexTitleCard title="チャットルーム &rarr;" link="/note" />
       </GridLayout>
     </>
   )
