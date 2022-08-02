@@ -4,7 +4,7 @@ import { Login } from 'tabler-icons-react'
 export const LoginButton = () => {
   return (
     <Center className="py-5">
-      <Anchor href="/">
+      <Anchor href="/edit">
         <Center>
           <Login />
         </Center>

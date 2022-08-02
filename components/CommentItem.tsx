@@ -18,8 +18,11 @@ export const CommentItem: FC<Omit<Comment, 'created_at' | 'note_id'>> = ({
     setUserId(supabase.auth.user()?.id)
   }, [])
   return (
-    <>
-      <div className="my-3 rounded-xl bg-slate-100 px-3 py-1 shadow-lg">
+    <Container
+      sx={{ borderTop: '1px solid gray' }}
+      className="my-0 bg-slate-200 px-3 py-1"
+    >
+      <div>
         <span>{content}</span>
         {userId === user_id && (
           <div className="float-right ml-20 flex">
@@ -41,6 +44,6 @@ export const CommentItem: FC<Omit<Comment, 'created_at' | 'note_id'>> = ({
           </div>
         )}
       </div>
-    </>
+    </Container>
   )
 }

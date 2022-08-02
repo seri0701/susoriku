@@ -48,7 +48,7 @@ const NotePage: NextPage<StaticProps> = ({ note }) => {
   return (
     <LayoutBlack title="NoteDetail">
       <p className="text-3xl font-semibold text-blue-200">{note.title}</p>
-      <div className="m-4 rounded-lg bg-slate-300 px-4 shadow-lg">
+      <div className="m-4 rounded-lg px-4 text-lg text-blue-100 shadow-lg">
         <p>{note.content}</p>
       </div>
       <div className="my-2">
