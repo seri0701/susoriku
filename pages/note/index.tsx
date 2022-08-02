@@ -13,7 +13,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const { data: notes, error } = await supabase
     .from('notes')
     .select('*')
-    .order('created_at', { ascending: true })
+    .order('created_at', { ascending: false })
   if (error) {
     throw new Error(`${error.message}: ${error.details}`)
   }

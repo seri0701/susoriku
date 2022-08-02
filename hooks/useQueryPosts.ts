@@ -7,7 +7,7 @@ export const useQueryPosts = () => {
     const { data, error } = await supabase
       .from('posts')
       .select('*')
-      .order('created_at', { ascending: true })
+      .order('created_at', { ascending: false })
     if (error) {
       throw new Error(error.message)
     }
@@ -23,7 +23,7 @@ export const useQueryResults = () => {
     const { data, error } = await supabase
       .from('results')
       .select('*')
-      .order('created_at', { ascending: true })
+      .order('created_at', { ascending: false })
     if (error) {
       throw new Error(error.message)
     }
