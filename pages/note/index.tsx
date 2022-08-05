@@ -9,7 +9,6 @@ import { LogoutButtonIndigo } from 'components/Atom/LogoutButtonIndigo'
 import FooterChat from 'components/FixedElement/FooterChat'
 
 export const getStaticProps: GetStaticProps = async () => {
-  console.log('ISR invoked - notes page')
   const { data: notes, error } = await supabase
     .from('notes')
     .select('*')

@@ -28,7 +28,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
   }
 }
 export const getStaticProps: GetStaticProps = async (ctx) => {
-  console.log('ISR invoked - detail page')
   const { data: note } = await supabase
     .from('notes')
     .select('*, comments(*)')

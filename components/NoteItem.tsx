@@ -5,6 +5,7 @@ import { supabase } from '../utils/supabase'
 import useStore from '../store'
 import { useMutateNote } from '../hooks/useMutateNote'
 import { Note } from '../types/types'
+import { EditIconNote } from './Molecules/EditIconNote'
 
 export const NoteItem: FC<
   Omit<Note, 'created_at' | 'note_id' | 'comments'>
@@ -22,26 +23,7 @@ export const NoteItem: FC<
           {title}
         </a>
       </Link>
-      {userId === user_id && (
-        <div className="float-right ml-20 flex">
-          <PencilAltIcon
-            className="mx-1 h-5 w-5 cursor-pointer text-blue-200"
-            onClick={() => {
-              update({
-                id: id,
-                title: title,
-                content: content,
-              })
-            }}
-          />
-          <TrashIcon
-            className="h-5 w-5 cursor-pointer text-blue-200"
-            onClick={() => {
-              deleteNoteMutation.mutate(id)
-            }}
-          />
-        </div>
-      )}
+      <EditIconNote id={id} title={title} content={content} user_id={user_id} />
     </li>
   )
 }
