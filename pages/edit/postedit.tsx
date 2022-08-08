@@ -83,6 +83,7 @@ const PostEdit = () => {
                 label="Title*"
                 placeholder="New title"
                 {...form.getInputProps('title')}
+                required
               />
               <Textarea
                 mb="md"
