@@ -1,8 +1,8 @@
-import { Layout } from '../../components/FixedElement/Layout'
-import HeaderCom from '../FixedElement/HeaderCom'
-import FooterCom from '../FixedElement/FooterCom'
-import IndexTitleCard from 'components/Molecules/IndexTitleCard'
-import { LogoutButtonGray } from 'components/Atom/LogoutButtonGray'
+import { Layout } from "../../components/FixedElement/Layout"
+import HeaderCom from "../FixedElement/SubHeader/HeaderCom"
+import FooterCom from "../FixedElement/FooterCom"
+import IndexTitleCard from "components/Molecules/IndexTitleCard"
+import { LogoutButtonGray } from "components/Atom/LogoutButtonGray"
 
 export const DashBoard = () => {
   return (

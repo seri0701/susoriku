@@ -1,10 +1,10 @@
-import type { NextPage } from 'next'
+import type { NextPage } from "next"
 
-import { Text } from '@mantine/core'
+import { Text } from "@mantine/core"
 
-import HeaderCom from 'components/FixedElement/HeaderCom'
-import FooterCom from 'components/FixedElement/FooterCom'
-import { Layout } from 'components/FixedElement/Layout'
+import HeaderCom from "components/FixedElement/SubHeader/HeaderCom"
+import FooterCom from "components/FixedElement/FooterCom"
+import { Layout } from "components/FixedElement/Layout"
 
 const Plan: NextPage = () => {
   return (

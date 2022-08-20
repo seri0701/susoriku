@@ -1,48 +1,48 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
+import type { NextPage } from "next"
+import Head from "next/head"
 
 // import { Text } from '@mantine/core'
 
-import HeaderCom from '../../components/FixedElement/HeaderCom'
-import FooterCom from '../../components/FixedElement/FooterCom'
-import { Layout } from '../../components/FixedElement/Layout'
+import HeaderCom from "../../components/FixedElement/SubHeader/HeaderCom"
+import FooterCom from "../../components/FixedElement/FooterCom"
+import { Layout } from "../../components/FixedElement/Layout"
 
-import Calender from '../../components/Organisms/CalendarCom'
+import Calender from "../../components/Organisms/CalendarCom"
 
 const Date = [
-  { Day: '7/23', Hour: 18, Minute: '00', Venue: '競技場' },
-  { Day: 28, Hour: 18, Minute: '00', Venue: '競技場' },
-  { Day: '8/3', Hour: 18, Minute: '00', Venue: '競技場' },
-  { Day: 13, Hour: 18, Minute: '00', Venue: '競技場' },
-  { Day: 20, Hour: 18, Minute: '00', Venue: '競技場' },
-  { Day: 27, Hour: 18, Minute: '00', Venue: '競技場' },
-  { Day: '9/3', Hour: 18, Minute: '00', Venue: '競技場' },
-  { Day: 10, Hour: 18, Minute: '00', Venue: '競技場' },
-  { Day: 17, Hour: 9, Minute: '00', Venue: '競技場' },
-  { Day: 21, Hour: 18, Minute: '00', Venue: '競技場 ⭐️' },
-  { Day: 30, Hour: 18, Minute: '00', Venue: '競技場' },
-  { Day: '10/8', Hour: 18, Minute: '00', Venue: '競技場' },
-  { Day: 13, Hour: 18, Minute: '00', Venue: '競技場 ⭐️' },
-  { Day: 22, Hour: 9, Minute: '00', Venue: '競技場' },
-  { Day: 27, Hour: 18, Minute: '00', Venue: '競技場 ⭐️' },
-  { Day: '11/5', Hour: 9, Minute: '00', Venue: '競技場' },
-  { Day: 12, Hour: 18, Minute: '00', Venue: '競技場' },
-  { Day: 19, Hour: 9, Minute: '00', Venue: '競技場' },
-  { Day: 26, Hour: 9, Minute: '00', Venue: '競技場' },
-  { Day: '12/10', Hour: 9, Minute: '00', Venue: '多目的広場' },
-  { Day: 17, Hour: 9, Minute: '00', Venue: '競技場' },
-  { Day: 24, Hour: 9, Minute: '00', Venue: '競技場' },
-  { Day: '1/7', Hour: 9, Minute: '00', Venue: '競技場' },
-  { Day: 21, Hour: 9, Minute: '00', Venue: '競技場' },
-  { Day: 28, Hour: 9, Minute: '00', Venue: '競技場' },
-  { Day: '2/4', Hour: 9, Minute: '00', Venue: '競技場' },
-  { Day: 11, Hour: 9, Minute: '00', Venue: '競技場' },
-  { Day: 18, Hour: 9, Minute: '00', Venue: '多目的広場' },
-  { Day: 25, Hour: 9, Minute: '00', Venue: '多目的広場' },
-  { Day: '3/4', Hour: 9, Minute: '00', Venue: '競技場' },
-  { Day: 11, Hour: 9, Minute: '00', Venue: '競技場' },
-  { Day: 18, Hour: 9, Minute: '00', Venue: '競技場' },
-  { Day: 25, Hour: 9, Minute: '00', Venue: '競技場' },
+  { Day: "7/23", Hour: 18, Minute: "00", Venue: "競技場" },
+  { Day: 28, Hour: 18, Minute: "00", Venue: "競技場" },
+  { Day: "8/3", Hour: 18, Minute: "00", Venue: "競技場" },
+  { Day: 13, Hour: 18, Minute: "00", Venue: "競技場" },
+  { Day: 20, Hour: 18, Minute: "00", Venue: "競技場" },
+  { Day: 27, Hour: 18, Minute: "00", Venue: "競技場" },
+  { Day: "9/3", Hour: 18, Minute: "00", Venue: "競技場" },
+  { Day: 10, Hour: 18, Minute: "00", Venue: "競技場" },
+  { Day: 17, Hour: 9, Minute: "00", Venue: "競技場" },
+  { Day: 21, Hour: 18, Minute: "00", Venue: "競技場 ⭐️" },
+  { Day: 30, Hour: 18, Minute: "00", Venue: "競技場" },
+  { Day: "10/8", Hour: 18, Minute: "00", Venue: "競技場" },
+  { Day: 13, Hour: 18, Minute: "00", Venue: "競技場 ⭐️" },
+  { Day: 22, Hour: 9, Minute: "00", Venue: "競技場" },
+  { Day: 27, Hour: 18, Minute: "00", Venue: "競技場 ⭐️" },
+  { Day: "11/5", Hour: 9, Minute: "00", Venue: "競技場" },
+  { Day: 12, Hour: 18, Minute: "00", Venue: "競技場" },
+  { Day: 19, Hour: 9, Minute: "00", Venue: "競技場" },
+  { Day: 26, Hour: 9, Minute: "00", Venue: "競技場" },
+  { Day: "12/10", Hour: 9, Minute: "00", Venue: "多目的広場" },
+  { Day: 17, Hour: 9, Minute: "00", Venue: "競技場" },
+  { Day: 24, Hour: 9, Minute: "00", Venue: "競技場" },
+  { Day: "1/7", Hour: 9, Minute: "00", Venue: "競技場" },
+  { Day: 21, Hour: 9, Minute: "00", Venue: "競技場" },
+  { Day: 28, Hour: 9, Minute: "00", Venue: "競技場" },
+  { Day: "2/4", Hour: 9, Minute: "00", Venue: "競技場" },
+  { Day: 11, Hour: 9, Minute: "00", Venue: "競技場" },
+  { Day: 18, Hour: 9, Minute: "00", Venue: "多目的広場" },
+  { Day: 25, Hour: 9, Minute: "00", Venue: "多目的広場" },
+  { Day: "3/4", Hour: 9, Minute: "00", Venue: "競技場" },
+  { Day: 11, Hour: 9, Minute: "00", Venue: "競技場" },
+  { Day: 18, Hour: 9, Minute: "00", Venue: "競技場" },
+  { Day: 25, Hour: 9, Minute: "00", Venue: "競技場" },
 ]
 
 const Regular: NextPage = () => {

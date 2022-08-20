@@ -3,10 +3,9 @@ import Head from "next/head"
 
 import { Layout } from "../components/FixedElement/LayoutMain"
 
-import PostListCom from "components/Organisms/PostListCom"
-import { Space } from "@mantine/core"
+import IndexCom from "components/Organisms/IndexCom"
 
-const Home: NextPage = () => {
+const about: NextPage = () => {
   return (
     <>
       <Layout title="裾野市陸上教室" image="raceimg.webp">
@@ -17,11 +16,10 @@ const Home: NextPage = () => {
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <Space h="sm" />
-        <PostListCom />
+        <IndexCom />
       </Layout>
     </>
   )
 }
 
-export default Home
+export default about

@@ -1,5 +1,5 @@
-import { ChangeEvent, useState } from 'react'
-import Link from 'next/link'
+import { ChangeEvent, useState } from "react"
+import Link from "next/link"
 import {
   Container,
   Center,
@@ -8,47 +8,47 @@ import {
   Loader,
   Textarea,
   Select,
-} from '@mantine/core'
-import { useForm, yupResolver } from '@mantine/form'
-import * as Yup from 'yup'
-import { ReplyIcon, CameraIcon } from '@heroicons/react/solid'
-import { useQueryClient } from '@tanstack/react-query'
+} from "@mantine/core"
+import { useForm, yupResolver } from "@mantine/form"
+import * as Yup from "yup"
+import { ReplyIcon, CameraIcon } from "@heroicons/react/solid"
+import { useQueryClient } from "@tanstack/react-query"
 
-import { Layout } from '../../components/FixedElement/Layout'
-import HeaderCom from 'components/FixedElement/HeaderCom'
-import FooterCom from 'components/FixedElement/FooterCom'
-import { Post } from '../../types'
-import { supabase } from '../../utils/supabase'
-import ResultCom from 'components/Organisms/ResultCom'
+import { Layout } from "../../components/FixedElement/Layout"
+import HeaderCom from "components/FixedElement/SubHeader/HeaderCom"
+import FooterCom from "components/FixedElement/FooterCom"
+import { Post } from "../../types"
+import { supabase } from "../../utils/supabase"
+import ResultCom from "components/Organisms/ResultCom"
 
 const schema = Yup.object().shape({
-  title: Yup.string().required('No title provided.'),
-  content: Yup.string().required('No content provided.'),
-  status: Yup.string().required('No status provided.'),
+  title: Yup.string().required("No title provided."),
+  content: Yup.string().required("No content provided."),
+  status: Yup.string().required("No status provided."),
 })
 
 const ResulteEdit = () => {
   const queryClient = useQueryClient()
   const [isLoading, setIsLoading] = useState(false)
-  const [postUrl, setPostUrl] = useState('')
-  const form = useForm<Omit<Post, 'id' | 'created_at' | 'post_url'>>({
+  const [postUrl, setPostUrl] = useState("")
+  const form = useForm<Omit<Post, "id" | "created_at" | "post_url">>({
     schema: yupResolver(schema),
     initialValues: {
-      title: '',
-      content: '',
-      status: '',
+      title: "",
+      content: "",
+      status: "",
     },
   })
   const uploadPostImg = async (e: ChangeEvent<HTMLInputElement>) => {
     if (!e.target.files || e.target.files.length === 0) {
-      throw new Error('Please select the image file')
+      throw new Error("Please select the image file")
     }
     const file = e.target.files[0]
-    const fileExt = file.name.split('.').pop()
+    const fileExt = file.name.split(".").pop()
     const fileName = `${Math.random()}.${fileExt}`
     setIsLoading(true)
     const { error } = await supabase.storage
-      .from('posts')
+      .from("posts")
       .upload(fileName, file)
     if (error) throw new Error(error.message)
     setPostUrl(fileName)
@@ -56,19 +56,19 @@ const ResulteEdit = () => {
   }
   const handleSubmit = async () => {
     setIsLoading(true)
-    const { data, error } = await supabase.from('results').insert({
+    const { data, error } = await supabase.from("results").insert({
       title: form.values.title,
       content: form.values.content,
       status: form.values.status,
       post_url: postUrl,
     })
     if (error) throw new Error(error.message)
-    const cachedPosts = queryClient.getQueryData<Post[]>(['posts'])
+    const cachedPosts = queryClient.getQueryData<Post[]>(["posts"])
     if (cachedPosts) {
-      queryClient.setQueryData(['posts'], [...cachedPosts, data[0]])
+      queryClient.setQueryData(["posts"], [...cachedPosts, data[0]])
     }
     setIsLoading(false)
-    setPostUrl('')
+    setPostUrl("")
     form.reset()
   }
   return (
@@ -81,7 +81,7 @@ const ResulteEdit = () => {
               mb="md"
               label="Title*"
               placeholder="New title"
-              {...form.getInputProps('title')}
+              {...form.getInputProps("title")}
               required
             />
             <Textarea
@@ -89,12 +89,12 @@ const ResulteEdit = () => {
               minRows={6}
               placeholder="New content"
               label="Description*"
-              {...form.getInputProps('content')}
+              {...form.getInputProps("content")}
             />
             <Select
               label="Status*"
-              data={['New', 'PickUp', 'Hot']}
-              {...form.getInputProps('status')}
+              data={["New", "PickUp", "Hot"]}
+              {...form.getInputProps("status")}
             />
             <Center>{isLoading && <Loader my="xl" />}</Center>
             <Center>

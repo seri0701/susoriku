@@ -1,8 +1,8 @@
-import { useState } from 'react'
+import { useState } from "react"
 //バリデーション用Yup
-import * as Yup from 'yup'
-import { ExclamationCircleIcon } from '@heroicons/react/outline'
-import { useForm, yupResolver } from '@mantine/form'
+import * as Yup from "yup"
+import { ExclamationCircleIcon } from "@heroicons/react/outline"
+import { useForm, yupResolver } from "@mantine/form"
 import {
   Anchor,
   TextInput,
@@ -10,40 +10,40 @@ import {
   Group,
   PasswordInput,
   Alert,
-} from '@mantine/core'
-import { Login } from 'tabler-icons-react'
-import { supabase } from '../../utils/supabase'
-import { Layout } from '../FixedElement/Layout'
-import { Form } from '../../types'
-import HeaderCom from '../FixedElement/HeaderCom'
+} from "@mantine/core"
+import { Login } from "tabler-icons-react"
+import { supabase } from "../../utils/supabase"
+import { Layout } from "../FixedElement/Layout"
+import { Form } from "../../types"
+import HeaderCom from "../FixedElement/SubHeader/HeaderCom"
 
 //バリデーションのロジック
 const schema = Yup.object().shape({
   //emailはstringなのでYup.string()を使う
   email: Yup.string()
-    .email('メールアドレスの形式で入力してください:Invalid email')
-    .required('メールアドレスは必須です:No email provided'),
+    .email("メールアドレスの形式で入力してください:Invalid email")
+    .required("メールアドレスは必須です:No email provided"),
   password: Yup.string()
-    .required('パスワードは必須です:No password provided')
-    .min(8, '8文字以上で入力してください:Password is too short')
+    .required("パスワードは必須です:No password provided")
+    .min(8, "8文字以上で入力してください:Password is too short")
     .matches(
       /[a-z]+/,
-      '小文字を含めてください:Password must contain at least one lowercase letter'
+      "小文字を含めてください:Password must contain at least one lowercase letter"
     )
     .matches(
       /[A-Z]+/,
-      '大文字を含めてください:Password must contain at least one uppercase letter'
+      "大文字を含めてください:Password must contain at least one uppercase letter"
     ),
 })
 
 export const Auth = () => {
   const [isRegister, setIsRegister] = useState(false)
-  const [error, setError] = useState('')
+  const [error, setError] = useState("")
   const form = useForm<Form>({
     schema: yupResolver(schema),
     initialValues: {
-      email: '',
-      password: '',
+      email: "",
+      password: "",
     },
   })
   const handleSubmit = async () => {
@@ -87,7 +87,7 @@ export const Auth = () => {
             id="email"
             label="Email*"
             placeholder="example@gmail.com"
-            {...form.getInputProps('email')}
+            {...form.getInputProps("email")}
           />
           <PasswordInput
             mt="md"
@@ -95,7 +95,7 @@ export const Auth = () => {
             placeholder="password"
             label="Password*"
             description="大文字 + 小文字"
-            {...form.getInputProps('password')}
+            {...form.getInputProps("password")}
           />
           <Group mt="lg" position="apart">
             <Anchor
@@ -104,14 +104,14 @@ export const Auth = () => {
               color="gray"
               onClick={() => {
                 setIsRegister(!isRegister)
-                setError('')
+                setError("")
               }}
               size="sm"
             >
-              {isRegister ? 'ログイン画面へ' : 'アカウント登録へ'}
+              {isRegister ? "ログイン画面へ" : "アカウント登録へ"}
             </Anchor>
             <Button color="gray" type="submit" leftIcon={<Login />}>
-              {isRegister ? '登録する' : 'Login'}
+              {isRegister ? "登録する" : "Login"}
             </Button>
           </Group>
         </form>

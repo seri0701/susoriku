@@ -1,24 +1,19 @@
-import type { NextPage } from 'next'
-import Image from 'next/image'
-import { Box, Text } from '@mantine/core'
+import type { NextPage } from "next"
+import Image from "next/image"
+import { Box, Space, Text } from "@mantine/core"
+import { GrayLine } from "components/Atom/GrayLine"
 
 const FooterCom: NextPage = () => {
   return (
-    <Box
-      component="footer"
-      className="flex"
-      sx={{
-        display: 'flex',
-        flex: '1',
-        paddingTop: '2rem',
-        paddingBottom: '2rem',
-        borderTop: '1px solid #eaeaea',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
-    >
-      <Text>©︎裾野市陸上教室</Text>
-    </Box>
+    <>
+      <GrayLine />
+      <Box
+        component="footer"
+        className=" m-2 flex h-16 items-center justify-center"
+      >
+        <Text>©︎裾野市陸上教室</Text>
+      </Box>
+    </>
   )
 }
 

@@ -1,9 +1,6 @@
-import { Center } from '@mantine/core'
-
-import GridLayout from 'components/Layout/GridLayout'
-import PostListCom from 'components/Organisms/PostListCom'
-import IndexCard from 'components/Molecules/IndexCard'
-import IndexTitleCard from 'components/Molecules/IndexTitleCard'
+import GridLayout from "components/Layout/GridLayout"
+import IndexCard from "components/Molecules/IndexCard"
+import IndexTitleCard from "components/Molecules/IndexTitleCard"
 
 const IndexCom = () => {
   return (
@@ -15,18 +12,10 @@ const IndexCom = () => {
           link="/calender/regular2022"
         />
         <IndexCard
-          title="７月練習予定 &rarr;"
-          description="Find in-depth information about features and KYOUSHITU."
-          link="/calender/calender07"
-        />
-      </GridLayout>
-      <PostListCom />
-      <GridLayout>
-        <IndexCard
           title="８月練習予定 &rarr;"
           description="Learn about Athletics in an interactive course with drill!"
           link="/calender/calender08"
-        />{' '}
+        />{" "}
         <IndexCard
           title="９月練習予定 &rarr;"
           description="Learn about Athletics in an interactive course with drill!"

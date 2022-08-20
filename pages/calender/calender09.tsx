@@ -1,29 +1,29 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
+import type { NextPage } from "next"
+import Head from "next/head"
 
-import HeaderCom from '../../components/FixedElement/HeaderCom'
-import FooterCom from '../../components/FixedElement/FooterCom'
-import { Layout } from '../../components/FixedElement/Layout'
+import HeaderCom from "../../components/FixedElement/SubHeader/HeaderCom"
+import FooterCom from "../../components/FixedElement/FooterCom"
+import { Layout } from "../../components/FixedElement/Layout"
 
-import Calender from '../../components/Organisms/CalendarCom'
+import Calender from "../../components/Organisms/CalendarCom"
 
 const Date = [
-  { Day: 1, Hour: 17, Minute: 30, Venue: '木' },
-  { Day: 2, Hour: 18, Minute: '00', Venue: '金' },
-  { Day: 3, Hour: 18, Minute: '00', Venue: '土' },
-  { Day: 6, Hour: 17, Minute: 30, Venue: '火' },
-  { Day: 8, Hour: 17, Minute: 30, Venue: '木' },
-  { Day: 9, Hour: 18, Minute: '00', Venue: '金' },
-  { Day: 10, Hour: 18, Minute: '00', Venue: '土' },
-  { Day: 13, Hour: 17, Minute: 30, Venue: '火' },
-  { Day: 15, Hour: 17, Minute: 30, Venue: '木' },
-  { Day: 16, Hour: 18, Minute: '00', Venue: '金' },
-  { Day: 17, Hour: 18, Minute: '00', Venue: '土' },
-  { Day: 21, Hour: 18, Minute: '00', Venue: '水' },
-  { Day: 24, Hour: 18, Minute: '00', Venue: '土' },
-  { Day: 27, Hour: 17, Minute: 30, Venue: '火' },
-  { Day: 29, Hour: 17, Minute: 30, Venue: '木' },
-  { Day: 30, Hour: 18, Minute: '00', Venue: '金' },
+  { Day: 1, Hour: 17, Minute: 30, Venue: "木" },
+  { Day: 2, Hour: 18, Minute: "00", Venue: "金" },
+  { Day: 3, Hour: 18, Minute: "00", Venue: "土" },
+  { Day: 6, Hour: 17, Minute: 30, Venue: "火" },
+  { Day: 8, Hour: 17, Minute: 30, Venue: "木" },
+  { Day: 9, Hour: 18, Minute: "00", Venue: "金" },
+  { Day: 10, Hour: 18, Minute: "00", Venue: "土" },
+  { Day: 13, Hour: 17, Minute: 30, Venue: "火" },
+  { Day: 15, Hour: 17, Minute: 30, Venue: "木" },
+  { Day: 16, Hour: 18, Minute: "00", Venue: "金" },
+  { Day: 17, Hour: 18, Minute: "00", Venue: "土" },
+  { Day: 21, Hour: 18, Minute: "00", Venue: "水" },
+  { Day: 24, Hour: 18, Minute: "00", Venue: "土" },
+  { Day: 27, Hour: 17, Minute: 30, Venue: "火" },
+  { Day: 29, Hour: 17, Minute: 30, Venue: "木" },
+  { Day: 30, Hour: 18, Minute: "00", Venue: "金" },
 ]
 
 const Calender08: NextPage = () => {
