@@ -29,7 +29,7 @@ export const Layout: FC<Props> = ({ children, title = "susono", image }) => {
         alt="Random unsplash image"
         fit="contain"
       />
-      <div className="flex min-h-screen flex-col">
+      <div className="flex flex-col">
         <div className="mx-auto  max-w-4xl flex-col items-center px-2">
           <main>{children}</main>
         </div>
