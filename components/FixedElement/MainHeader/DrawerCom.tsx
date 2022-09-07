@@ -46,13 +46,13 @@ export const DrawerCom: FC = () => {
           >
             年間行事予定
           </Anchor>
-          <Anchor
+          {/* <Anchor
             href="/calender/calender08"
             weight={700}
             className="my-4 text-white"
           >
             ８月練習予定
-          </Anchor>
+          </Anchor> */}
           <Anchor
             href="/calender/calender09"
             weight={700}
