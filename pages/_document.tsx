@@ -1,5 +1,5 @@
-import Document, { Head, Html, Main, NextScript } from 'next/document'
-import { createGetInitialProps } from '@mantine/next'
+import Document, { Head, Html, Main, NextScript } from "next/document"
+import { createGetInitialProps } from "@mantine/next"
 
 const getInitialProps = createGetInitialProps()
 
@@ -10,6 +10,10 @@ export default class _Document extends Document {
     return (
       <Html>
         <Head />
+        <meta
+          name="google-site-verification"
+          content="Qsv-aaCpuXDB2Xem4vIgTXcOco914A7epqBo6qJP9IQ"
+        />
         <body>
           <Main />
           <NextScript />
