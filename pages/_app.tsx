@@ -1,11 +1,12 @@
 import type { AppProps } from "next/app"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import {
   MantineProvider,
   ColorSchemeProvider,
   ColorScheme,
 } from "@mantine/core"
+import { useColorScheme } from "@mantine/hooks"
 import { NotificationsProvider } from "@mantine/notifications"
 import "../styles/globals.css"
 
@@ -19,9 +20,19 @@ const queryClient = new QueryClient({
 })
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const [colorScheme, setColorScheme] = useState<ColorScheme>("light")
+  //Detect user preferred color scheme
+  const preferredColorScheme = useColorScheme()
+  const [colorScheme, setColorScheme] =
+    useState<ColorScheme>(preferredColorScheme)
   const toggleColorScheme = (value?: ColorScheme) =>
     setColorScheme(value || (colorScheme === "dark" ? "light" : "dark"))
+  useEffect(() => {
+    setColorScheme(preferredColorScheme)
+  }, [preferredColorScheme])
+  //元のダークテーマ設定
+  // const [colorScheme, setColorScheme] = useState<ColorScheme>("light")
+  // const toggleColorScheme = (value?: ColorScheme) =>
+  //   setColorScheme(value || (colorScheme === "dark" ? "light" : "dark"))
   return (
     <QueryClientProvider client={queryClient}>
       <ColorSchemeProvider
