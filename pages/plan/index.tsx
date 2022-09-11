@@ -5,11 +5,13 @@ import { Text } from "@mantine/core"
 import HeaderCom from "components/FixedElement/SubHeader/HeaderCom"
 import FooterCom from "components/FixedElement/FooterCom"
 import { Layout } from "components/FixedElement/Layout"
+import { HeaderNavi } from "components/FixedElement/MainHeader/HeaderNavi"
 
 const Plan: NextPage = () => {
   return (
     <>
       <Layout title="方針">
+        <HeaderNavi />
         <HeaderCom Caption="" Color="gray" />
         <Text size="xl" color="maroon" align="center">
           裾野市陸上教室の方針

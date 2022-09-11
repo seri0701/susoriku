@@ -1,5 +1,5 @@
-import { FC } from 'react'
-import { Anchor, Text } from '@mantine/core'
+import { FC } from "react"
+import { Anchor, Text } from "@mantine/core"
 
 type Props = {
   Color: string
@@ -7,8 +7,8 @@ type Props = {
 }
 
 const HeaderCom: FC<Props> = ({ Color, Caption }) => {
-  const HeaderColor = Color ? Color : '#0070f3'
-  const HeaderCaption = Caption ? Caption : ''
+  const HeaderColor = Color ? Color : "#0070f3"
+  const HeaderCaption = Caption ? Caption : ""
 
   return (
     <>
@@ -16,12 +16,12 @@ const HeaderCom: FC<Props> = ({ Color, Caption }) => {
         <Text
           sx={{
             color: HeaderColor,
-            fontSize: '2rem',
-            '@media (min-width: 800px)': {
-              fontSize: '3rem',
+            fontSize: "2rem",
+            "@media (min-width: 800px)": {
+              fontSize: "3rem",
             },
-            fontWeight: 'bold',
-            textAlign: 'center',
+            fontWeight: "bold",
+            textAlign: "center",
           }}
           className="mt-6"
         >
@@ -31,13 +31,13 @@ const HeaderCom: FC<Props> = ({ Color, Caption }) => {
 
       <Text
         sx={{
-          color: 'black',
-          fontSize: '0.9rem',
-          '@media (min-width: 700px)': {
-            fontSize: '1.2rem',
+          color: "gray",
+          fontSize: "0.9rem",
+          "@media (min-width: 700px)": {
+            fontSize: "1.2rem",
           },
-          padding: '1rem',
-          textAlign: 'center',
+          padding: "1rem",
+          textAlign: "center",
         }}
       >
         {HeaderCaption}

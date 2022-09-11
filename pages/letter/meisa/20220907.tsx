@@ -3,11 +3,13 @@ import type { NextPage } from "next"
 import { Text, Title } from "@mantine/core"
 
 import { LayoutLetter } from "components/FixedElement/LayoutLetter"
+import { HeaderNavi } from "components/FixedElement/MainHeader/HeaderNavi"
 
 const Plan: NextPage = () => {
   return (
     <>
       <LayoutLetter title="手紙">
+        <HeaderNavi />
         <Title order={2} color="maroon" align="center" className="mt-10 mb-6">
           芽生皐へ
         </Title>
