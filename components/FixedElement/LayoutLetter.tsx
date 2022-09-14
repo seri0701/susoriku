@@ -1,5 +1,6 @@
 import { FC, ReactNode } from "react"
 import Head from "next/head"
+import { useMantineColorScheme } from "@mantine/core"
 
 type Props = {
   title: string
@@ -7,8 +8,13 @@ type Props = {
 }
 
 export const LayoutLetter: FC<Props> = ({ children, title = "手紙" }) => {
+  const { colorScheme } = useMantineColorScheme()
+  const dark = colorScheme === "dark"
+  const select = dark
+    ? "flex min-h-screen bg-neutral-800"
+    : "flex  min-h-screen bg-neutral-300"
   return (
-    <div className="flex min-h-screen bg-neutral-200">
+    <div className={select}>
       <Head>
         <title>{title}</title>
       </Head>
