@@ -31,7 +31,7 @@ export const DrawerCom: FC = () => {
             : theme.colors.indigo[2]
         }
       >
-        <div className="m-3 flex flex-col text-3xl">
+        <div className="m-3 flex flex-col text-2xl">
           <Anchor
             href="/calender/regular2022"
             weight={700}
