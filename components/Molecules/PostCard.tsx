@@ -1,5 +1,5 @@
-import { FC } from 'react'
-import { Card, Text, Badge, Group, Button } from '@mantine/core'
+import { FC } from "react"
+import { Card, Text, Badge, Group, Button } from "@mantine/core"
 
 type Props = {
   title: string
@@ -9,7 +9,7 @@ type Props = {
 }
 export const PostCard: FC<Props> = ({ title, content, status }) => {
   return (
-    <Card className="bg-slate-200">
+    <Card>
       <Group position="apart" my="md">
         <Text weight={800}>{title}</Text>
         <Badge color="pink" radius="lg" variant="filled">
