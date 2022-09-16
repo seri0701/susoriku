@@ -72,6 +72,13 @@ export const DrawerCom: FC = () => {
           <Anchor href="/note" weight={700} className="my-4 text-white">
             チャットルーム
           </Anchor>
+          <Anchor
+            href="/practice/longjamp"
+            weight={700}
+            className="my-4 text-white"
+          >
+            跳躍チーム
+          </Anchor>
         </div>
       </Drawer>
     </div>
