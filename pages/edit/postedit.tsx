@@ -8,8 +8,7 @@ import {
   Textarea,
   Select,
 } from "@mantine/core"
-import { useForm, yupResolver } from "@mantine/form"
-import * as Yup from "yup"
+import { useForm } from "@mantine/form"
 import { useQueryClient } from "@tanstack/react-query"
 
 import { Layout } from "../../components/FixedElement/Layout"
@@ -21,18 +20,11 @@ import PostListCom from "components/Organisms/PostListCom"
 import { AuthCom } from "hooks/auth/authCom"
 import { LogoutButton } from "components/Atom/LogoutButton"
 
-const schema = Yup.object().shape({
-  title: Yup.string().required("No title provided."),
-  content: Yup.string().required("No content provided."),
-  status: Yup.string().required("No status provided."),
-})
-
 const PostEdit = () => {
   const queryClient = useQueryClient()
   const [isLoading, setIsLoading] = useState(false)
   const [postUrl, setPostUrl] = useState("")
   const form = useForm<Omit<Post, "id" | "created_at" | "post_url">>({
-    schema: yupResolver(schema),
     initialValues: {
       title: "",
       content: "",
@@ -90,11 +82,13 @@ const PostEdit = () => {
                 minRows={6}
                 placeholder="New content"
                 label="Description*"
+                required
                 {...form.getInputProps("content")}
               />
               <Select
                 label="Status*"
                 data={["New", "PickUp", "Hot"]}
+                required
                 {...form.getInputProps("status")}
               />
               <Center>{isLoading && <Loader my="xl" />}</Center>

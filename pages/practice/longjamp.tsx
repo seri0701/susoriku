@@ -1,6 +1,6 @@
 import type { NextPage } from "next"
 
-import { Accordion, Text } from "@mantine/core"
+import { Accordion } from "@mantine/core"
 
 import HeaderCom from "components/FixedElement/SubHeader/HeaderCom"
 import FooterCom from "components/FixedElement/FooterCom"
@@ -53,7 +53,10 @@ const Plan: NextPage = () => {
                 borderTop: "1px solid #eaeaea",
               }}
             >
-              <Accordion.Item label={item.Title}>{item.Content}</Accordion.Item>
+              <Accordion.Item value={item.Title}>
+                <Accordion.Control>{item.Title}</Accordion.Control>
+                <Accordion.Panel>{item.Content}</Accordion.Panel>
+              </Accordion.Item>
             </Accordion>
           )
         })}

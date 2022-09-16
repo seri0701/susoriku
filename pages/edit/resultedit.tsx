@@ -9,8 +9,7 @@ import {
   Textarea,
   Select,
 } from "@mantine/core"
-import { useForm, yupResolver } from "@mantine/form"
-import * as Yup from "yup"
+import { useForm } from "@mantine/form"
 import { ReplyIcon, CameraIcon } from "@heroicons/react/solid"
 import { useQueryClient } from "@tanstack/react-query"
 
@@ -21,18 +20,11 @@ import { Post } from "../../types"
 import { supabase } from "../../utils/supabase"
 import ResultCom from "components/Organisms/ResultCom"
 
-const schema = Yup.object().shape({
-  title: Yup.string().required("No title provided."),
-  content: Yup.string().required("No content provided."),
-  status: Yup.string().required("No status provided."),
-})
-
 const ResulteEdit = () => {
   const queryClient = useQueryClient()
   const [isLoading, setIsLoading] = useState(false)
   const [postUrl, setPostUrl] = useState("")
   const form = useForm<Omit<Post, "id" | "created_at" | "post_url">>({
-    schema: yupResolver(schema),
     initialValues: {
       title: "",
       content: "",
@@ -89,10 +81,12 @@ const ResulteEdit = () => {
               minRows={6}
               placeholder="New content"
               label="Description*"
+              required
               {...form.getInputProps("content")}
             />
             <Select
               label="Status*"
+              required
               data={["New", "PickUp", "Hot"]}
               {...form.getInputProps("status")}
             />

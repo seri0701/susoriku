@@ -1,8 +1,6 @@
 import { useState } from "react"
-//バリデーション用Yup
-import * as Yup from "yup"
 import { ExclamationCircleIcon } from "@heroicons/react/outline"
-import { useForm, yupResolver } from "@mantine/form"
+import { useForm } from "@mantine/form"
 import {
   Anchor,
   TextInput,
@@ -17,33 +15,16 @@ import { Layout } from "../FixedElement/Layout"
 import { Form } from "../../types"
 import HeaderCom from "../FixedElement/SubHeader/HeaderCom"
 
-//バリデーションのロジック
-const schema = Yup.object().shape({
-  //emailはstringなのでYup.string()を使う
-  email: Yup.string()
-    .email("メールアドレスの形式で入力してください:Invalid email")
-    .required("メールアドレスは必須です:No email provided"),
-  password: Yup.string()
-    .required("パスワードは必須です:No password provided")
-    .min(8, "8文字以上で入力してください:Password is too short")
-    .matches(
-      /[a-z]+/,
-      "小文字を含めてください:Password must contain at least one lowercase letter"
-    )
-    .matches(
-      /[A-Z]+/,
-      "大文字を含めてください:Password must contain at least one uppercase letter"
-    ),
-})
-
 export const Auth = () => {
   const [isRegister, setIsRegister] = useState(false)
   const [error, setError] = useState("")
   const form = useForm<Form>({
-    schema: yupResolver(schema),
     initialValues: {
       email: "",
       password: "",
+    },
+    validate: {
+      email: (value) => (/^\S+@\S+$/.test(value) ? null : "入力してください"),
     },
   })
   const handleSubmit = async () => {
@@ -69,7 +50,7 @@ export const Auth = () => {
   return (
     <Layout title="Auth">
       <HeaderCom Color="gray" Caption="記事を投稿する？ &rarr;" />
-      <Group direction="column" position="center">
+      <Group position="center">
         {error && (
           <Alert
             mt="md"
@@ -83,6 +64,7 @@ export const Auth = () => {
         )}
         <form onSubmit={form.onSubmit(handleSubmit)}>
           <TextInput
+            required
             mt="md"
             id="email"
             label="Email*"
@@ -90,6 +72,7 @@ export const Auth = () => {
             {...form.getInputProps("email")}
           />
           <PasswordInput
+            required
             mt="md"
             id="password"
             placeholder="password"

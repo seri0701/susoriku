@@ -12,7 +12,7 @@ export const LayoutLetter: FC<Props> = ({ children, title = "手紙" }) => {
   const dark = colorScheme === "dark"
   const select = dark
     ? "flex min-h-screen bg-neutral-800"
-    : "flex  min-h-screen bg-neutral-300"
+    : "flex min-h-screen bg-neutral-300"
   return (
     <div className={select}>
       <Head>
