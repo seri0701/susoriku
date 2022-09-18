@@ -1,6 +1,6 @@
 import type { NextPage } from "next"
 
-import { Text, Title } from "@mantine/core"
+import { Anchor, Text, Title } from "@mantine/core"
 
 import { LayoutLetter } from "components/FixedElement/LayoutLetter"
 import { HeaderNavi } from "components/FixedElement/MainHeader/HeaderNavi"
@@ -82,7 +82,7 @@ const Plan: NextPage = () => {
         <Title order={4} className="m-2 mt-4">
           追伸
         </Title>
-        <Text className="mx-2">
+        {/* <Text className="mx-2">
           火曜日は毎週教室にいますが違う競技を教えていると思うので、必要なら声を掛けてください。
         </Text>
         <Text className="mx-2">
@@ -91,12 +91,68 @@ const Plan: NextPage = () => {
         <Text className="mx-2">金曜日は教室が開催されていればいます。</Text>
         <Text className="mx-2">
           土曜日は毎週練習しているので競技場であったらよろしく。夜も教室に参加しています。
-        </Text>
+        </Text> */}
         <Text className="mx-2">
           県大会は審判の出席をしませんが、速報やYouTubeを見て応援しています。がんばってください。
         </Text>
         <Text align="right" className="mx-2 mt-6 mb-20">
           2022-9-7 芹澤 勇気
+        </Text>{" "}
+        <Title order={4} className="m-2 mt-4">
+          三島記録会
+        </Title>
+        <Text className="mx-2">手紙を渡しそびれてしまったので追記で</Text>
+        <Text className="mx-2">
+          腰の痛みからか疲れからか、動きが重くなっているように感じました。
+        </Text>{" "}
+        <Text className="mx-2">
+          ２本目が１本目と同じくらい跳べたのは収穫かと思います。３本目は審判の呼び出すタイミングが悪かったですね。注意しておきました。
+        </Text>
+        <Text className="mx-2">
+          リレーの決勝と重なった選手が息を切らしながら３本目を跳んで、比較的好成績を出していました。どのくらいの状態で跳躍するかはそれぞれで難しいですが、そういう選手もいるということを念頭に試技間の時間を組み立ててみてください。
+        </Text>
+        <Text className="mx-2 mt-2">
+          腰の痛みは家族と相談してみてください。　１．整体に行く
+          ２．湿布を貼る　３．病院に行って湿布をもらう　おすすめは１＋２かな
+        </Text>
+        <Anchor href="https://www.sugiyamaseikotu2.com/" className="mx-2">
+          いつも行っている杉山接骨院のリンク
+        </Anchor>
+        <Text className="mx-2">
+          整体に行く場合はどこをマッサージするのかよく覚えておくと良いと思います。{" "}
+        </Text>
+        <Text className="mx-2 mt-2">
+          疲れについては、部活の顧問に相談してください。せっかくの県大会なので、大会に向けた調整メニューを組みたいところです。
+        </Text>
+        <Text className="mx-2">
+          全助走で跳ぶのは２本だけと決めるとか、練習量を減らして、強度の強い練習をするのが一般的ですが、先生の指示に従うのが良いと思います。
+        </Text>
+        <Text className="mx-2">
+          が、量が多いと感じる場合は適度に手を抜いて、大事なポイントだけがんばると良いと思います。
+        </Text>
+        <Anchor href="https://youtu.be/XMrms53l77w" className="mx-2">
+          調整メニュー参考動画のリンク
+        </Anchor>
+        <Text className="mx-2 mt-2">
+          試合２日前にも違和感が消えないようなら、キネシオテープを貼ってごまかしましょう。
+        </Text>
+        <Text className="mx-2 mb-2">
+          どこが痛いかによって貼り方は違うけど。杉山接骨院で相談かな
+        </Text>
+        <Anchor
+          href="http://kinesio.kachidoki-chiro.com/index.html/cn14/pg140.html"
+          className="mx-2"
+        >
+          よく痛くなるところのデーピングのリンク
+        </Anchor>
+        <Text className="mx-2">
+          ↓説明のトリガーポイントらへんをほぐすとわりと良くなることも多い
+        </Text>
+        <Anchor href="https://www.hirakawa-g.jp/8744/" className="mx-2">
+          筋肉の説明のリンク
+        </Anchor>
+        <Text align="right" className="mx-2 mt-6 mb-20">
+          2022-9-19
         </Text>{" "}
       </LayoutLetter>
     </>
