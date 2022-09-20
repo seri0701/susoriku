@@ -8,6 +8,10 @@ import {
 } from "@mantine/core"
 import { useColorScheme } from "@mantine/hooks"
 import { NotificationsProvider } from "@mantine/notifications"
+//GoogleAnalytics
+import { GoogleAnalytics } from "components/GoogleAnalytics"
+import usePageView from "hooks/usePageView"
+
 import "../styles/globals.css"
 
 const queryClient = new QueryClient({
@@ -20,6 +24,9 @@ const queryClient = new QueryClient({
 })
 
 function MyApp({ Component, pageProps }: AppProps) {
+  //GoogleAnalytics
+  usePageView()
+
   //Detect user preferred color scheme
   const preferredColorScheme = useColorScheme()
   const [colorScheme, setColorScheme] =
@@ -34,31 +41,35 @@ function MyApp({ Component, pageProps }: AppProps) {
   // const toggleColorScheme = (value?: ColorScheme) =>
   //   setColorScheme(value || (colorScheme === "dark" ? "light" : "dark"))
   return (
-    <QueryClientProvider client={queryClient}>
-      <ColorSchemeProvider
-        colorScheme={colorScheme}
-        toggleColorScheme={toggleColorScheme}
-      >
-        <MantineProvider
-          withGlobalStyles
-          withNormalizeCSS
-          theme={{
-            colorScheme,
-            breakpoints: {
-              xs: 500,
-              sm: 800,
-              md: 1000,
-              lg: 1200,
-              xl: 1400,
-            },
-          }}
+    <>
+      {/* Global Site Tag (gtag.js) - Google Analytics */}
+      <GoogleAnalytics />
+      <QueryClientProvider client={queryClient}>
+        <ColorSchemeProvider
+          colorScheme={colorScheme}
+          toggleColorScheme={toggleColorScheme}
         >
-          <NotificationsProvider limit={2}>
-            <Component {...pageProps} />
-          </NotificationsProvider>
-        </MantineProvider>
-      </ColorSchemeProvider>
-    </QueryClientProvider>
+          <MantineProvider
+            withGlobalStyles
+            withNormalizeCSS
+            theme={{
+              colorScheme,
+              breakpoints: {
+                xs: 500,
+                sm: 800,
+                md: 1000,
+                lg: 1200,
+                xl: 1400,
+              },
+            }}
+          >
+            <NotificationsProvider limit={2}>
+              <Component {...pageProps} />
+            </NotificationsProvider>
+          </MantineProvider>
+        </ColorSchemeProvider>
+      </QueryClientProvider>
+    </>
   )
 }
 
