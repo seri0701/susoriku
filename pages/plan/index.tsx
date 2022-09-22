@@ -11,6 +11,10 @@ const Plan: NextPage = () => {
   return (
     <>
       <Layout title="方針">
+        <meta
+          name="google-site-verification"
+          content="Qsv-aaCpuXDB2Xem4vIgTXcOco914A7epqBo6qJP9IQ"
+        />
         <HeaderNavi />
         <HeaderCom Caption="" Color="gray" />
         <Text size="xl" color="blue" align="center">

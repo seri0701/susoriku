@@ -94,6 +94,10 @@ const Plan: NextPage = () => {
   return (
     <>
       <Layout title="走り幅跳び練習内容">
+        <meta
+          name="google-site-verification"
+          content="Qsv-aaCpuXDB2Xem4vIgTXcOco914A7epqBo6qJP9IQ"
+        />
         <HeaderCom Caption="走り幅跳び練習内容" Color="gray" />
         {Date.map((item: any) => {
           return (
