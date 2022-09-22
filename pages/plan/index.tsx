@@ -6,15 +6,18 @@ import HeaderCom from "components/FixedElement/SubHeader/HeaderCom"
 import FooterCom from "components/FixedElement/FooterCom"
 import { Layout } from "components/FixedElement/Layout"
 import { HeaderNavi } from "components/FixedElement/MainHeader/HeaderNavi"
+import Head from "next/head"
 
 const Plan: NextPage = () => {
   return (
     <>
       <Layout title="方針">
-        <meta
-          name="google-site-verification"
-          content="Qsv-aaCpuXDB2Xem4vIgTXcOco914A7epqBo6qJP9IQ"
-        />
+        <Head>
+          <meta
+            name="google-site-verification"
+            content="Qsv-aaCpuXDB2Xem4vIgTXcOco914A7epqBo6qJP9IQ"
+          />
+        </Head>
         <HeaderNavi />
         <HeaderCom Caption="" Color="gray" />
         <Text size="xl" color="blue" align="center">

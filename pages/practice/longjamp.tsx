@@ -5,6 +5,7 @@ import { Accordion, Anchor, Text } from "@mantine/core"
 import HeaderCom from "components/FixedElement/SubHeader/HeaderCom"
 import FooterCom from "components/FixedElement/FooterCom"
 import { Layout } from "components/FixedElement/Layout"
+import Head from "next/head"
 
 const Date = [
   {
@@ -94,10 +95,12 @@ const Plan: NextPage = () => {
   return (
     <>
       <Layout title="走り幅跳び練習内容">
-        <meta
-          name="google-site-verification"
-          content="Qsv-aaCpuXDB2Xem4vIgTXcOco914A7epqBo6qJP9IQ"
-        />
+        <Head>
+          <meta
+            name="google-site-verification"
+            content="Qsv-aaCpuXDB2Xem4vIgTXcOco914A7epqBo6qJP9IQ"
+          />
+        </Head>
         <HeaderCom Caption="走り幅跳び練習内容" Color="gray" />
         {Date.map((item: any) => {
           return (
