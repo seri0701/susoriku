@@ -46,19 +46,20 @@ export const DrawerCom: FC = () => {
           >
             年間行事予定
           </Anchor>
-          {/* <Anchor
-            href="/calender/calender08"
-            weight={700}
-            className="my-4 text-white"
-          >
-            ８月練習予定
-          </Anchor> */}
+          {/* カレンダーの修正は、drawer、ヘッダーナビ、インデックスCom */}
           <Anchor
-            href="/calender/calender09"
+            href="/calender/calender10"
             weight={700}
             className="my-4 text-white"
           >
-            ９月練習予定
+            10月練習予定
+          </Anchor>
+          <Anchor
+            href="/calender/calender11"
+            weight={700}
+            className="my-4 text-white"
+          >
+            11月練習予定
           </Anchor>
           <Anchor href="/result" weight={700} className="my-4 text-white">
             競技会結果（工事中）
