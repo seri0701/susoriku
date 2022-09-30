@@ -31,18 +31,18 @@ export const DrawerCom: FC = () => {
             : theme.colors.indigo[2]
         }
       >
-        <div className="m-3 flex flex-col text-2xl">
+        <div className="m-3 flex flex-col text-xl">
           <Anchor
             href="/calender/regular2022"
             weight={700}
-            className="my-4 text-white"
+            className="my-3 text-white"
           >
             定期練習予定
           </Anchor>
           <Anchor
             href="/event/event2022"
             weight={700}
-            className="my-4 text-white"
+            className="my-3 text-white"
           >
             年間行事予定
           </Anchor>
@@ -50,35 +50,35 @@ export const DrawerCom: FC = () => {
           <Anchor
             href="/calender/calender10"
             weight={700}
-            className="my-4 text-white"
+            className="my-3 text-white"
           >
             10月練習予定
           </Anchor>
           <Anchor
             href="/calender/calender11"
             weight={700}
-            className="my-4 text-white"
+            className="my-3 text-white"
           >
             11月練習予定
           </Anchor>
-          <Anchor href="/result" weight={700} className="my-4 text-white">
-            競技会結果（工事中）
-          </Anchor>
-          <Anchor href="/plan" weight={700} className="my-4 text-white">
+          <Anchor href="/plan" weight={700} className="my-3 text-white">
             育成方針
           </Anchor>{" "}
-          <Anchor href="/edit" weight={700} className="my-4 text-white">
-            記事投稿
-          </Anchor>{" "}
-          <Anchor href="/note" weight={700} className="my-4 text-white">
+          <Anchor href="/note" weight={700} className="my-3 text-white">
             チャットルーム
           </Anchor>
           <Anchor
             href="/practice/longjamp"
             weight={700}
-            className="my-4 text-white"
+            className="my-3 text-white"
           >
             跳躍チーム
+          </Anchor>
+          <Anchor href="/edit" weight={700} className="my-3 text-white">
+            記事投稿
+          </Anchor>{" "}
+          <Anchor href="/result" weight={700} className="my-3 text-white">
+            競技会結果（工事中）
           </Anchor>
         </div>
       </Drawer>
