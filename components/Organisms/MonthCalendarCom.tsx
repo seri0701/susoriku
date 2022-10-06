@@ -20,13 +20,16 @@ export const MonthCalenderCom: FC<Props> = ({ CALENDER_ITEMS }) => {
               borderTop: "1px solid #eaeaea",
             }}
           >
-            <Grid.Col span={4} className="text-right">
+            <Grid.Col span={3} className="text-right">
+              {item.Regular}
+            </Grid.Col>
+            <Grid.Col span={2} className="text-center">
               {item.Day}日
             </Grid.Col>
-            <Grid.Col span={3} className="text-center">
+            <Grid.Col span={2} className="text-center">
               {item.Venue}
             </Grid.Col>
-            <Grid.Col span={4} className="text-left">
+            <Grid.Col span={5} className="text-left">
               {item.Hour}時{item.Minute}分
             </Grid.Col>
           </Grid>
