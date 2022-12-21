@@ -15,9 +15,9 @@ export const HeaderNavi: FC = () => {
         </Group>
         <Group spacing={3}>
           <NaviItem Href="/about" Label="Index" />
-          <NaviItem Href="" Label="Blog" />
-          <NaviItem Href="/calender/calender11" Label="Calender" />
-          <NaviItem Href="/note" Label="ChatRoom" />
+          {/* <NaviItem Href="" Label="Blog" /> */}
+          <NaviItem Href="/calender/calender12" Label="Calender" />
+          {/* <NaviItem Href="/note" Label="ChatRoom" /> */}
           <DarkSwitch />
         </Group>
       </header>

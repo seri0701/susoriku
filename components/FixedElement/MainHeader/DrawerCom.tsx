@@ -48,25 +48,25 @@ export const DrawerCom: FC = () => {
           </Anchor>
           {/* カレンダーの修正は、drawer、ヘッダーナビ、インデックスCom */}
           <Anchor
-            href="/calender/calender10"
+            href="/calender/calender12"
             weight={700}
             className="my-3 text-white"
           >
-            10月練習予定
+            12月練習予定
           </Anchor>
           <Anchor
-            href="/calender/calender11"
+            href="/calender/calender1"
             weight={700}
             className="my-3 text-white"
           >
-            11月練習予定
+            1月練習予定
           </Anchor>
           <Anchor href="/plan" weight={700} className="my-3 text-white">
             育成方針
           </Anchor>{" "}
-          <Anchor href="/note" weight={700} className="my-3 text-white">
+          {/* <Anchor href="/note" weight={700} className="my-3 text-white">
             チャットルーム
-          </Anchor>
+          </Anchor> */}
           <Anchor
             href="/practice/longjamp"
             weight={700}
@@ -74,11 +74,14 @@ export const DrawerCom: FC = () => {
           >
             跳躍チーム
           </Anchor>
-          <Anchor href="/edit" weight={700} className="my-3 text-white">
+          {/* <Anchor href="/edit" weight={700} className="my-3 text-white">
             記事投稿
-          </Anchor>{" "}
-          <Anchor href="/result" weight={700} className="my-3 text-white">
+          </Anchor>{" "} */}
+          {/* <Anchor href="/result" weight={700} className="my-3 text-white">
             競技会結果（工事中）
+          </Anchor> */}
+          <Anchor href="/" weight={700} className="my-3 text-white">
+            問い合わせ（準備中）
           </Anchor>
         </div>
       </Drawer>
