@@ -12,14 +12,9 @@ const IndexCom = () => {
           link="/calender/regular2022"
         />
         <IndexCard
-          title="10月練習予定 &rarr;"
+          title="1月練習予定 &rarr;"
           description="Learn about Athletics in an interactive course with drill!"
-          link="/calender/calender10"
-        />
-        <IndexCard
-          title="11月練習予定 &rarr;"
-          description="Learn about Athletics in an interactive course with drill!"
-          link="/calender/calender11"
+          link="/calender/calender1"
         />
         <IndexCard
           title="年間行事予定 &rarr;"
@@ -30,10 +25,10 @@ const IndexCom = () => {
           title="走り幅跳び練習内容 &rarr;"
           link="/practice/longjamp"
         />
-        <IndexTitleCard title="競技会結果 &rarr;" link="/result" />
+        {/* <IndexTitleCard title="競技会結果 &rarr;" link="/result" /> */}
         <IndexTitleCard title="育成方針 &rarr;" link="/plan" />
-        <IndexTitleCard title="記事投稿 &rarr;" link="/edit" />
-        <IndexTitleCard title="チャットルーム &rarr;" link="/note" />
+        {/* <IndexTitleCard title="記事投稿 &rarr;" link="/edit" /> */}
+        {/* <IndexTitleCard title="チャットルーム &rarr;" link="/note" /> */}
       </GridLayout>
     </>
   )
