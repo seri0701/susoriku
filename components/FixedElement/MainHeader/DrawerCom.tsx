@@ -40,7 +40,7 @@ export const DrawerCom: FC = () => {
             定期練習予定
           </Anchor>
           <Anchor
-            href="/event/event2022"
+            href="/event/event2023"
             weight={700}
             className="my-3 text-white"
           >

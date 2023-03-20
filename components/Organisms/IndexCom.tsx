@@ -19,7 +19,7 @@ const IndexCom = () => {
         <IndexCard
           title="年間行事予定 &rarr;"
           description="Instantly deployed your Next.js site to a public URL with Vercel."
-          link="/event/event2022"
+          link="/event/event2023"
         />
         <IndexTitleCard
           title="走り幅跳び練習内容 &rarr;"
