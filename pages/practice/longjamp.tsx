@@ -1,6 +1,6 @@
 import type { NextPage } from "next"
 
-import { Accordion, Anchor, Text } from "@mantine/core"
+import { Accordion, Anchor, Text, Image, Space } from "@mantine/core"
 
 import HeaderCom from "components/FixedElement/SubHeader/HeaderCom"
 import FooterCom from "components/FixedElement/FooterCom"
@@ -34,7 +34,7 @@ const Date = [
   {
     Title: "踏切手前から踏切まで",
     Content:
-      "４歩前で最終的な助走距離を合わせる　３歩前で少し重心を下げる　２歩前でぐっと前に身体を押し出す　１歩前で引き上げる足をつま先で蹴り出す　踏切足を伸ばして足の裏全体をついて体重を乗せていき、１歩前で蹴り出した足を飛びたい方向に出す。身体を持ち上げるように腕を振り全身で踏み切る。",
+      "４歩前で最終的な助走距離を合わせる　３歩前で踏切までの心構えをする　２歩前でぐっと前に身体を押し出して１歩前に向けて重心を下げていく　１歩前は腰の真下にくるぶしの下から地面に着くようにして、引き上げる足をつま先で蹴り出す。この時重心は大人で１０㎝程度下がる。　踏切足を伸ばして足の裏全体をついて体重を乗せていき、１歩前で蹴り出した足を飛びたい方向に出す。身体を持ち上げるように腕を振り全身で踏み切る。",
   },
   {
     Title: "踏切のリズム",
@@ -103,6 +103,8 @@ const Plan: NextPage = () => {
           />
         </Head>
         <HeaderCom Caption="走り幅跳び練習内容" Color="gray" />
+        <Image src="/longjamp.webp" alt="走り幅跳び" fit="contain" />
+        <Space h="xs" />
         {Date.map((item: any) => {
           return (
             <Accordion

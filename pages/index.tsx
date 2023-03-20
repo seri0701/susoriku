@@ -9,7 +9,7 @@ import { Space } from "@mantine/core"
 const Home: NextPage = () => {
   return (
     <>
-      <Layout title="裾野市陸上教室" image="sana.webp">
+      <Layout title="裾野市陸上教室" image="sana.webp" alt="裾野市陸上教室">
         <Head>
           <meta
             name="裾野市陸上教室"

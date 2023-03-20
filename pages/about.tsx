@@ -8,7 +8,7 @@ import IndexCom from "components/Organisms/IndexCom"
 const about: NextPage = () => {
   return (
     <>
-      <Layout title="裾野市陸上教室" image="raceimg.webp">
+      <Layout title="裾野市陸上教室" image="raceimg.webp" alt="">
         <Head>
           <meta
             name="裾野市陸上教室"

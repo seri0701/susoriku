@@ -10,9 +10,15 @@ type Props = {
   title: string
   children: ReactNode
   image: string
+  alt: string
 }
 
-export const Layout: FC<Props> = ({ children, title = "susono", image }) => {
+export const Layout: FC<Props> = ({
+  children,
+  title = "susono",
+  image,
+  alt,
+}) => {
   const router = useRouter()
   return (
     <>
@@ -26,7 +32,7 @@ export const Layout: FC<Props> = ({ children, title = "susono", image }) => {
       <Image
         // radius="md"
         src={image}
-        alt="Random unsplash image"
+        alt={alt}
         fit="contain"
       />
       <div className="flex flex-col">
