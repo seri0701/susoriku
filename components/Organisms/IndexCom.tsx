@@ -12,9 +12,9 @@ const IndexCom = () => {
           link="/calender/regular2022"
         />
         <IndexCard
-          title="4月練習予定 &rarr;"
+          title="6月練習予定 &rarr;"
           description="Learn about Athletics in an interactive course with drill!"
-          link="/calender/calender4"
+          link="/calender/calender6"
         />
         <IndexCard
           title="年間行事予定 &rarr;"
