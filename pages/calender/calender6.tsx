@@ -14,7 +14,7 @@ const Date = [
   { Day: 6, Venue: "火", Hour: 17, Minute: 30 },
   { Day: 8, Venue: "木", Hour: 17, Minute: 30 },
   { Regular: "定期", Day: 9, Venue: "金", Hour: 18, Minute: "00" },
-  { Regular: "チャレンジカップ", Day: 11, Venue: "土", Hour: 7, Minute: "00" },
+  { Regular: "チャレンジカップ", Day: 11, Venue: "日", Hour: 7, Minute: "00" },
   { Day: 13, Venue: "火", Hour: 17, Minute: 30 },
   { Day: 15, Venue: "木", Hour: 17, Minute: 30 },
   { Day: 16, Venue: "金", Hour: 17, Minute: 30 },
