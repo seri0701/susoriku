@@ -9,23 +9,19 @@ import { MonthCalenderCom } from "../../components/Organisms/MonthCalendarCom"
 import { HeaderNavi } from "components/FixedElement/MainHeader/HeaderNavi"
 
 const Date = [
-  { Day: 1, Venue: "火", Hour: 17, Minute: 30 },
-  { Day: 3, Venue: "木", Hour: 17, Minute: 30 },
-  { Day: 4, Venue: "金", Hour: 18, Minute: "00" },
-  { Regular: "定期", Day: 5, Venue: "土", Hour: 9, Minute: "00" },
-  { Day: 8, Venue: "火", Hour: 17, Minute: 30 },
-  { Day: 10, Venue: "木", Hour: 17, Minute: 30 },
-  { Day: 11, Venue: "金", Hour: 18, Minute: "00" },
-  { Regular: "定期", Day: 12, Venue: "土", Hour: 18, Minute: "00" },
-  { Day: 15, Venue: "火", Hour: 17, Minute: 30 },
-  { Day: 17, Venue: "木", Hour: 17, Minute: 30 },
-  { Day: 18, Venue: "金", Hour: 18, Minute: "00" },
-  { Regular: "定期", Day: 19, Venue: "土", Hour: 9, Minute: "00" },
-  { Day: 22, Venue: "火", Hour: 17, Minute: 30 },
-  { Day: 24, Venue: "木", Hour: 17, Minute: 30 },
-  { Day: 25, Venue: "金", Hour: 18, Minute: "00" },
-  { Regular: "定期", Day: 26, Venue: "土", Hour: 9, Minute: "00" },
-  { Day: 29, Venue: "火", Hour: 17, Minute: 30 },
+  { Regular: "定期", Day: 2, Venue: "木", Hour: 18, Minute: "00" },
+  { Day: 7, Venue: "火", Hour: 17, Minute: 30 },
+  { Day: 9, Venue: "木", Hour: 17, Minute: 30 },
+  { Regular: "定期", Day: 11, Venue: "土", Hour: 9, Minute: "00" },
+  { Day: 14, Venue: "火", Hour: 17, Minute: 30 },
+  { Day: 16, Venue: "木", Hour: 17, Minute: 30 },
+  { Day: 17, Venue: "金", Hour: 17, Minute: 30 },
+  { Regular: "定期", Day: 18, Venue: "土", Hour: 9, Minute: "00" },
+  { Day: 21, Venue: "火", Hour: 17, Minute: 30 },
+  { Day: 23, Venue: "木", Hour: 17, Minute: 30 },
+  { Regular: "定期", Day: 25, Venue: "土", Hour: 9, Minute: "00" },
+  { Day: 28, Venue: "火", Hour: 17, Minute: 30 },
+  { Day: 30, Venue: "木", Hour: 17, Minute: 30 },
 ]
 
 const Calender11: NextPage = () => {

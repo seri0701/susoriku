@@ -48,18 +48,25 @@ export const DrawerCom: FC = () => {
           </Anchor>
           {/* カレンダーの修正は、drawer、ヘッダーナビ、インデックスCom */}
           <Anchor
-            href="/calender/calender8"
-            weight={700}
-            className="my-3 text-white"
-          >
-            8月練習予定
-          </Anchor>
-          <Anchor
             href="/calender/calender9"
             weight={700}
             className="my-3 text-white"
           >
             9月練習予定
+          </Anchor>
+          <Anchor
+            href="/calender/calender10"
+            weight={700}
+            className="my-3 text-white"
+          >
+            10月練習予定
+          </Anchor>
+          <Anchor
+            href="/calender/calender11"
+            weight={700}
+            className="my-3 text-white"
+          >
+            11月練習予定
           </Anchor>
           <Anchor href="/plan" weight={700} className="my-3 text-white">
             育成方針
