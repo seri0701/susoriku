@@ -22,8 +22,8 @@ const Date = [
   { Regular: "定期", Day: 21, Venue: "木", Hour: 18, Minute: "00" },
   { Regular: "三島市陸上記録会", Day: 23, Venue: "土", Hour: 7, Minute: "00" },
   { Day: 26, Venue: "火", Hour: 17, Minute: 30 },
-  { Day: 27, Venue: "木", Hour: 17, Minute: 30 },
-  { Regular: "定期", Day: 28, Venue: "金", Hour: 18, Minute: "00" },
+  { Day: 28, Venue: "木", Hour: 17, Minute: 30 },
+  { Regular: "定期", Day: 29, Venue: "金", Hour: 18, Minute: "00" },
 ]
 
 const Calender9: NextPage = () => {
