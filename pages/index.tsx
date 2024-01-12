@@ -22,7 +22,7 @@ const Home: NextPage = () => {
           />
         </Head>
         <Space h="sm" />
-        <PostListCom />
+        {/* <PostListCom /> */}
       </Layout>
     </>
   )

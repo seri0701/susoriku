@@ -25,9 +25,9 @@ export const Layout: FC<Props> = ({
       <Head>
         <title>{title}</title>
       </Head>
-      <div className="mx-auto max-w-5xl flex-col items-center px-2">
+      {/* <div className="mx-auto max-w-5xl flex-col items-center px-2">
         <HeaderNavi />
-      </div>
+      </div> */}
       {router.pathname === "/" ? <HeaderLine /> : null}
       <Image
         // radius="md"
@@ -39,6 +39,7 @@ export const Layout: FC<Props> = ({
         <div className="mx-auto  max-w-4xl flex-col items-center px-2">
           <main>{children}</main>
         </div>
+        お問い合わせは裾野市陸上競技場の掲示板をご覧ください。
         <FooterCom />
       </div>
     </>
